@@ -21,13 +21,22 @@ const Navbar = () => {
             display: "flex",
             alignItems: "center",
             border: "1px solid #e5e5e5",
-            boxShadow: "5px 5px 10px #e5e5e5",
+            boxShadow: "5px 5px 10px #bcbcbc",
             flexDirection: "row",
             justifyContent: "space-between",
           }}
         >
-          <Box sx={{ mx: "40px", maxWidth: "200px" }}>
-            <Box sx={{ fontSize: "20px", color: "black", }}>WINPAPER</Box>
+          <Box sx={{ mx: "40px", maxWidth: "200px", display: "flex", alignItems: "center", gap: "5px" }}>
+            <Box
+              sx={{
+                backgroundImage: "url(./src/assets/winpaper_icon_black.png)",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                width: "30px",
+                height: "30px",
+              }}
+            />
+            <Box sx={{ fontSize: "20px", color: "black" }}>WINPAPER</Box>
           </Box>
         </Box>
       </Box>

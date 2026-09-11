@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <div style={{ height: "75px" }} />
+      <div style={{ height: "90px" }} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/homepage" element={<Home />} />
