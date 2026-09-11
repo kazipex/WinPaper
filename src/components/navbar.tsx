@@ -16,22 +16,25 @@ const Navbar = () => {
       <Box
         sx={{
           width: "100%",
-          height: "75px",
+          height: "170px",
           position: "fixed",
           display: "flex",
           justifyContent: "center",
+          backgroundImage: "linear-gradient(to bottom, #d4d4d4, #ffffff00)",
+          animation: `${PopinAnimation} 0.5s ease-in-out`,
         }}
       >
         <Box
           sx={{
             mx: "20px",
+            width: "60vw",
             height: "75px",
-            backgroundColor: "white",
+            backgroundColor: "rgb(255, 255, 255)",
             borderRadius: "0px 0px 10px 10px",
             display: "flex",
             alignItems: "center",
-            border: "1px solid #e5e5e5",
-            boxShadow: "5px 5px 10px #bcbcbc",
+            border: "1px solid #cecece",
+            boxShadow: "5px 5px 10px #d4d4d4",
             flexDirection: "row",
             justifyContent: "space-between",
             animation: `${PopinAnimation} 0.5s ease-in-out`,
@@ -53,9 +56,13 @@ const Navbar = () => {
                 backgroundPosition: "center",
                 width: "30px",
                 height: "30px",
+                transition: "all 0.3s ease-in-out",
+                "&:hover": {
+                  transform: "scale(1.3)",
+                },
               }}
             />
-            <Box sx={{ fontSize: "20px", color: "black" }}>WINPAPER</Box>
+            <Box sx={{ fontSize: "25px", color: "black", fontFamily: "Segoe UI, sans-serif" }}>WinPaper</Box>
           </Box>
         </Box>
       </Box>

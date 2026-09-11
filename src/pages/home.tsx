@@ -7,16 +7,48 @@ export default function Home() {
       <Box
         sx={{
           width: "100%",
+          height: "200vh",
           display: "flex",
-          justifyContent: "center",
+          flexDirection: "column",
+          justifyContent: "flex-start",
           alignItems: "center",
-          gap: "20px",
+          backgroundColor: "#f8f8f8",
         }}
       >
-        <WallpaperThumbnail />
+        <Box
+          sx={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "10px",
+            py: "10px",
+            backgroundColor: "#ffffff",
+          }}
+        >
+          <WallpaperThumbnail />
+          <WallpaperThumbnail />
+          <WallpaperThumbnail />
+          <WallpaperThumbnail />
+        </Box>
         
+        <Box
+          sx={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "10px",
+            pb: "10px",
+            backgroundColor: "#ffffff",
+          }}
+        >
+          <WallpaperThumbnail />
+          <WallpaperThumbnail />
+          <WallpaperThumbnail />
+          <WallpaperThumbnail />
+        </Box>
       </Box>
     </>
   );
 }
-
