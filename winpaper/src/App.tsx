@@ -10,7 +10,7 @@ function App() {
       <div style={{ height: "75px" }} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/homepage" element={<Home />} />
       </Routes>
     </>
   );
