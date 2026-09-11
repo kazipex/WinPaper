@@ -1,4 +1,14 @@
 import Box from "@mui/material/Box";
+import { keyframes } from "@emotion/react";
+
+const PopinAnimation = keyframes`
+  0% {
+    transform: translateY(-75px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+`;
 
 const Navbar = () => {
   return (
@@ -24,9 +34,18 @@ const Navbar = () => {
             boxShadow: "5px 5px 10px #bcbcbc",
             flexDirection: "row",
             justifyContent: "space-between",
+            animation: `${PopinAnimation} 0.5s ease-in-out`,
           }}
         >
-          <Box sx={{ mx: "40px", maxWidth: "200px", display: "flex", alignItems: "center", gap: "5px" }}>
+          <Box
+            sx={{
+              mx: "40px",
+              maxWidth: "200px",
+              display: "flex",
+              alignItems: "center",
+              gap: "5px",
+            }}
+          >
             <Box
               sx={{
                 backgroundImage: "url(./src/assets/winpaper_icon_black.png)",
