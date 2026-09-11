@@ -1,4 +1,5 @@
 import { Box } from "@mui/material";
+import thumbnailPlaceholder from "./../assets/placeholder/placeholder-thumbnail.png";
 
 const wallpaperThumbnail = () => {
   return (
@@ -13,7 +14,7 @@ const wallpaperThumbnail = () => {
           boxShadow: "5px 5px 10px #e5e5e5",
           justifyContent: "center",
           backgroundImage:
-            "url(./src/assets/placeholder/placeholder-thumbnail.png)",
+            `url(${thumbnailPlaceholder})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           transition: "all 0.3s ease-in-out",

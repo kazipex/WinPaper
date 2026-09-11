@@ -1,5 +1,6 @@
 import Box from "@mui/material/Box";
 import { keyframes } from "@emotion/react";
+import logo from "./../assets/winpaper_icon_black.png";
 
 const PopinAnimation = keyframes`
   0% {
@@ -51,7 +52,7 @@ const Navbar = () => {
           >
             <Box
               sx={{
-                backgroundImage: "url(./src/assets/winpaper_icon_black.png)",
+                backgroundImage: `url(${logo})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 width: "30px",
