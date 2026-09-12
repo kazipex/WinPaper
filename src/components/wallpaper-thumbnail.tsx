@@ -1,27 +1,27 @@
 import { Box } from "@mui/material";
-import thumbnailPlaceholder from "./../assets/placeholder/placeholder-thumbnail.png";
 
-const wallpaperThumbnail = () => {
+type imgSrc = {
+  thumbImage: string;
+};
+
+const wallpaperThumbnail = ({ thumbImage }: imgSrc) => {
   return (
     <>
-      <Box
+      <Box onClick={() => console.log("clicked")}
         sx={{
-          width: "480px",
-          height: "270px",
+          width: "300px",
+          height: "540px",
           display: "flex",
           backgroundColor: "white",
-          borderRadius: "10px",
-          boxShadow: "5px 5px 10px #e5e5e5",
           justifyContent: "center",
           backgroundImage:
-            `url(${thumbnailPlaceholder})`,
+            `url(${thumbImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           transition: "all 0.3s ease-in-out",
           "&:hover": {
-            width: "540px",
-            height: "303px",
-            boxShadow: "10px 10px 20px #8e8e8e",
+            width: "1080px",
+            height: "540px",
           },
         }}
       ></Box>

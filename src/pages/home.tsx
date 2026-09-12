@@ -1,9 +1,24 @@
 import WallpaperThumbnail from "./../components/wallpaper-thumbnail";
-import { Box } from "@mui/material";
+import { Box, keyframes } from "@mui/material";
+
+const PopinAnimation = keyframes`
+  0% {
+    transform: translateY(-800px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+`;
 
 export default function Home() {
   return (
     <>
+      <Box
+        sx={{
+          height: "65vh",
+          backgroundImage: "linear-gradient(to bottom, #d4d4d4, #ffffff00)",
+        }}
+      />
       <Box
         sx={{
           width: "100%",
@@ -19,34 +34,21 @@ export default function Home() {
           sx={{
             width: "100%",
             display: "flex",
-            justifyContent: "center",
             alignItems: "center",
-            gap: "10px",
             py: "10px",
             backgroundColor: "#ffffff",
+            boxShadow: "0px 40px 200px #151515af",
+            gap: "5px",
           }}
         >
-          <WallpaperThumbnail />
-          <WallpaperThumbnail />
-          <WallpaperThumbnail />
-          <WallpaperThumbnail />
-        </Box>
-        
-        <Box
-          sx={{
-            width: "100%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: "10px",
-            pb: "10px",
-            backgroundColor: "#ffffff",
-          }}
-        >
-          <WallpaperThumbnail />
-          <WallpaperThumbnail />
-          <WallpaperThumbnail />
-          <WallpaperThumbnail />
+          <Box sx={{ mx: "20px", width: "60vw", display: "flex" }}>
+            {" "}
+            <WallpaperThumbnail thumbImage="./src/assets/placeholder/placeholder-thumbnail-1.png" />
+            <WallpaperThumbnail thumbImage="./src/assets/placeholder/placeholder-thumbnail-2.png" />
+            <WallpaperThumbnail thumbImage="./src/assets/placeholder/placeholder-thumbnail-3.png" />
+            <WallpaperThumbnail thumbImage="./src/assets/placeholder/placeholder-thumbnail-4.png" />
+            <WallpaperThumbnail thumbImage="./src/assets/placeholder/placeholder-thumbnail-5.png" />
+          </Box>
         </Box>
       </Box>
     </>
