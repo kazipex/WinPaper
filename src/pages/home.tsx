@@ -1,14 +1,14 @@
 import WallpaperThumbnail from "./../components/wallpaper-thumbnail";
-import { Box, keyframes } from "@mui/material";
+import { Box } from "@mui/material";
 
-const PopinAnimation = keyframes`
-  0% {
-    transform: translateY(-800px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-`;
+//const PopinAnimation = keyframes`
+//  0% {
+//    transform: translateY(-800px);
+//  }
+//  100% {
+//    transform: translateY(0px);
+//  }
+//`;
 
 export default function Home() {
   return (
