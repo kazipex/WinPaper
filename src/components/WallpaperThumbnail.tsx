@@ -1,12 +1,5 @@
 import { Box } from "@mui/material";
 
-const images = import.meta.glob('./assets/placeholder/*.png', {
-  eager: true,
-  import: 'default',
-}) as Record<string, string>;
-
-const imagePaths = Object.values(images);
-
 interface WallpaperThumbnailProps {
   thumbImage: string;
 }
