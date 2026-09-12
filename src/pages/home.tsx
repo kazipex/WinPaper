@@ -1,4 +1,4 @@
-import WallpaperThumbnail from "./../components/wallpaper-thumbnail";
+import WallpaperThumbnail from "../components/WallpaperThumbnail";
 import { Box } from "@mui/material";
 
 //const PopinAnimation = keyframes`
@@ -9,6 +9,21 @@ import { Box } from "@mui/material";
 //    transform: translateY(0px);
 //  }
 //`;
+
+const images = import.meta.glob('../assets/placeholder/*.png', {
+  eager: true,
+  import: 'default',
+}) as Record<string, string>;
+
+const imagePaths = Object.values(images);
+
+const WallpaperGallery = () => (
+  <>
+    {imagePaths.map((src) => (
+      <WallpaperThumbnail key={src} thumbImage={src} />
+    ))}
+  </>
+);
 
 export default function Home() {
   return (

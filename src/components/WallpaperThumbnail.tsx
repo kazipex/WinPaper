@@ -1,10 +1,17 @@
 import { Box } from "@mui/material";
 
-type imgSrc = {
-  thumbImage: string;
-};
+const images = import.meta.glob('./assets/placeholder/*.png', {
+  eager: true,
+  import: 'default',
+}) as Record<string, string>;
 
-const wallpaperThumbnail = ({ thumbImage }: imgSrc) => {
+const imagePaths = Object.values(images);
+
+interface WallpaperThumbnailProps {
+  thumbImage: string;
+}
+
+const WallpaperThumbnail = ({ thumbImage }: WallpaperThumbnailProps) => {
   return (
     <>
       <Box onClick={() => console.log("clicked")}
@@ -29,4 +36,4 @@ const wallpaperThumbnail = ({ thumbImage }: imgSrc) => {
   );
 };
 
-export default wallpaperThumbnail;
+export default WallpaperThumbnail;
